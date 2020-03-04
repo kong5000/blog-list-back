@@ -1,0 +1,11 @@
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+    "username" : "keith",
+    "name" : "Keith O",
+    "password" : "mypassword",
+    "blogs" : ["5e5c5f7bad071f2ca090ce59",
+                "5e5c970917ea513fdc86934e"
+               ]
+}

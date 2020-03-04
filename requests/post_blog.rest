@@ -1,0 +1,11 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtlaXRoIiwiaWQiOiI1ZTVkM2U0NDM4ZjA4ODQ3YWRlMTMwYzkiLCJpYXQiOjE1ODMxNzIyOTh9.HfK6EhtrYziFtCQOj6I9zRjX7QgAEEBv8_f6uhPeqco
+
+{
+    "title": "BLOG_TITLE",
+    "author": "AUTHOR",
+    "url": "www.string.com",
+    "likes": "123",
+    "user": "5e5c8bc61052c73dca7e6fcc"
+}
