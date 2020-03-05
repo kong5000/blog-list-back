@@ -17,9 +17,9 @@ beforeEach(async () => {
 
 test('Can create a single user', async () => {
     const testUser = {
-        username: "user1",
-        name: "Joe",
-        password: "joesPassword"
+        username: "keith",
+        name: "Keith O",
+        password: "mypassword"
     }
 
     await api.post('/api/users')
