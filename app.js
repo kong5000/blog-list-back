@@ -15,6 +15,8 @@ const commentsRouter = require('./controllers/comments')
 //exposes the variables in the .env file in the root folder.
 mongoose.connect(config.MONGODB_URI, { useNewUrlParser: true })
 
+console.log(config.MONGODB_URI)
+
 app.use(cors())
 app.use(bodyParser.json())
 //Instead of doing app.get('/api/blog... use a router to seperate code.
