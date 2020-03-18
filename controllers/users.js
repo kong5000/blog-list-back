@@ -2,8 +2,8 @@ const bcrypt = require('bcrypt')
 const usersRouter = require('express').Router()
 const User = require('../models/user')
 
-usersRouter.post('/', async (request, response, next) => {
-    try{
+usersRouter.post('/api/users', async (request, response, next) => {
+    try {
         const body = request.body
 
         const saltRounds = 10
@@ -19,15 +19,21 @@ usersRouter.post('/', async (request, response, next) => {
         const savedUser = await user.save()
 
         response.json(savedUser)
-    } catch(exception){
+    } catch (exception) {
         next(exception)
     }
 })
 
-usersRouter.get('/', async (request, response, next) => {
+usersRouter.get('/api/users', async (request, response, next) => {
     const allUsers = await User.find({}).populate('blogs')
     const usersJson = allUsers.map(u => u.toJSON())
     response.json(usersJson);
 })
+
+usersRouter.delete('/api/users', (request, response) => {
+    User.deleteMany({}).then(response.status(204).end())
+
+})
+
 
 module.exports = usersRouter

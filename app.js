@@ -25,7 +25,7 @@ app.use(cors())
 app.use(express.static('build'))
 //Instead of doing app.get('/api/blog... use a router to seperate code.
 app.use(blogsRouter)
-app.use('/api/users', usersRouter)
+app.use(usersRouter)
 app.use('/api/login', loginRouter)
 app.use(commentsRouter)
 

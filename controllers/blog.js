@@ -68,6 +68,10 @@ blogsRouter.delete('/api/blogs/:id', (request, response) => {
     )
 })
 
+blogsRouter.delete('/api/blogs', (request, response) => {
+    Blog.deleteMany({}).then(response.status(204).end())
+})
+
 blogsRouter.put('/api/blogs/:id', (request, response) => {
     const body = request.body
 
