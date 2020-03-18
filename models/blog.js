@@ -9,7 +9,8 @@ const blogSchema = mongoose.Schema({
     },
     url: String,
     likes: Number,
-    comments: [String]
+    comments: [String],
+    date: String
   })
   
 //Blog is a 'model', a special kind of constructor. Instances of a model are

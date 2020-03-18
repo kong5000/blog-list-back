@@ -50,8 +50,10 @@ blogsRouter.post('/api/blogs', async (request, response, next) => {
             author: body.author,
             user: user._id,
             url: body.url,
-            likes: body.likes
+            likes: body.likes,
+            date: Date(Date.now()).toString()
         })
+        
 
         const savedBlog = await blog.save()
         user.blogs = user.blogs.concat(savedBlog._id)
