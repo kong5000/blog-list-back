@@ -48,6 +48,7 @@ blogsRouter.post('/api/blogs', async (request, response, next) => {
         const blog = new Blog({
             title: body.title,
             author: body.author,
+            content: body.content,
             user: user._id,
             url: body.url,
             likes: body.likes,
