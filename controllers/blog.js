@@ -75,6 +75,8 @@ blogsRouter.delete('/api/blogs', (request, response) => {
 })
 
 blogsRouter.put('/api/blogs/:id', (request, response) => {
+    console.log(request.body)
+    console.log('PUT REQUEST IS MADE')
     const body = request.body
 
     const blog = {

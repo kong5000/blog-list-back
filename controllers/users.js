@@ -30,6 +30,14 @@ usersRouter.get('/api/users', async (request, response, next) => {
     response.json(usersJson);
 })
 
+usersRouter.get('/api/users/:username', (request, response) => {
+    User
+        .findOne({'username':request.params.username})
+        .then(user => {
+            response.json(user)
+        })
+})
+
 usersRouter.delete('/api/users', (request, response) => {
     User.deleteMany({}).then(response.status(204).end())
 
