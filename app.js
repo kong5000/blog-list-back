@@ -20,9 +20,7 @@ console.log(config.MONGODB_URI)
 
 app.use(bodyParser.json())
 app.use(cors())
-// Whenever express gets a GET request, first check the build directory to
-// serve the front end
-app.use(express.static('build'))
+
 //Instead of doing app.get('/api/blog... use a router to seperate code.
 app.use(blogsRouter)
 app.use(usersRouter)
